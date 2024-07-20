@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Metadonnées -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Liens vers les feuilles de style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Titre de la page -->
+    <title>School</title>
+    <!-- Icône de la page -->
+    <link rel="shortcut icon" href="images-icon.webp" type="img/icon">
+ 
+</head>
+<body>
+   <!-- En-tête de la page -->
+   <header>
+       <!-- Conteneur du logo et des icônes de réseaux sociaux -->
+       <div class="conteneur">
+           <!-- Logo -->
+           <div class="logo">
+               <a href=""><img src="images/Logo_DLP.png" width="290px" alt=""></a>
+           </div>
+           <!-- Icônes de réseaux sociaux -->
+           <div class="icones">
+               <a href="https://www.instagram.com/tomorrowspringindia/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+               <a href="https://www.facebook.com/share/rHpaiGdb5vSHbYr9/?mibextid=LQQJ4d" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+               <a href="https://x.com/ecoletheatrale?s=21&t=O5NOC0WPUXTLkObxIAntFA" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+               <a href="https://youtube.com/@demainleprintempsecolethea2147?si=VA9rE7H1rggAMFvh" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+           </div>
+       </div>
+       <!-- Barre de navigation -->
+        <div class="sticky">
+
+       
+       <div class="conteneur2">
+           <nav>
+               <ul class="menu">
+                   <!-- Éléments du menu -->
+                   <li>
+                       <a href="index.html">School</a>
+                       <!-- Sous-menu -->
+                       <ul class="submenu">
+                           <li><a href="the-stanislavski-acting-school-educational-content.html">Educational content </a></li>
+                           <li><a href="the-stanislavski-acting-school-school-tomorrow-spring-india.html">Tomorrow Spring India</a></li>
+                           <li><a href="the-stanislavski-acting-school-our-teaching-team.html">Our teaching team</a></li>
+                           <li><a href="the-stanislavski-acting-school-our-disciplines.html">Our discipline</a></li>
+                           <li><a href="the-stanislavski-acting-school-no-need-to-speak-russian.html">No need to speek Russian</a></li>
+                           <li><a href="the-stanislavski-acting-school-rates-and-quotations.html">Rates and Quotations</a></li>
+                           <li><a href="the-stanislavski-acting-school-grow.html">Grow</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a href="#">Formation +</a>
+                       <ul class="submenu">
+                           <li><a href="the-stanislavski-acting-school-intership-1-month.html">One-month intership</a></li>
+                           <li><a href="the-stanislavski-acting-school-masterclass-10-month.html">Masterclass 9 month</a></li>
+                           <li><a href="the-stanislavski-acting-school-admission.html">Admission</a></li>
+                           <li><a href="the-stanislavski-acting-school-hosting.html">Hosting</a></li>
+                           <li><a href="the-stanislavski-acting-school-diploma-end-training.html">Diploma of completion</a></li>
+                           
+                       </ul>
+                   </li>
+                   
+                   <li><a href="the-stanislavski-acting-school-press-and-multimedia.html">Press and Multimedia</a></li>
+                   <li>
+                       <a href="">Associations +</a>
+                       <ul class="submenu">
+                           <li><a href="the-stanislavski-acting-school-DLP.html">D.L.P</a></li>
+                           <li><a href="the-stanislavski-acting-school-collective.html">collective</a></li>
+                           <li><a href="http://www.moo-teatro.by/" target="_blank">Moo treatro</a></li>
+                           <li><a href="https://ecole-theatrale.com/images/pdf/Asso_DLP_adh%C3%A9sion(2018).pdf" target="_blank"> Support us</a></li>
+                           <li><a href="the-stanislavski-acting-school-our-partner.html">Partners</a></li>
+                           <li><a href="the-stanislavski-acting-school-developer.html">Developers</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="the-stanislavski-acting-school-news.html">News</a></li>
+               </ul>
+           </nav>
+           <!-- Bouton de contact WhatsApp -->
+           <div class="boutton">
+           <a href="https://wa.me/+919818070238?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank" class="whatsapp-link"><button> <img src="whatsapp.png" width="17px" alt=""> &nbsp;+91 98180 70238</button></a>
+           </div>
+       </div>
+        </div>
+       <!-- Script JavaScript -->
+   <script>
+       document.addEventListener('DOMContentLoaded', function() {
+           // Gestion de l'ouverture des sous-menus
+           var menuItems = document.querySelectorAll('nav .menu > li > a');
+           var openSubmenu = null;
+
+           menuItems.forEach(function(menuItem) {
+               menuItem.addEventListener('click', function(event) {
+                   var submenu = this.nextElementSibling;
+
+                   if (submenu && submenu.classList.contains('submenu')) {
+                       if (submenu.style.display === 'block') {
+                           // Si le sous-menu est déjà ouvert, suivre le lien
+                           return true;
+                       } else {
+                           // Si le sous-menu n'est pas ouvert, l'ouvrir et empêcher l'action par défaut
+                           event.preventDefault();
+                           closeAllSubmenus();
+                           submenu.style.display = 'block';
+                           openSubmenu = submenu;
+                       }
+                   }
+               });
+           });
+
+           document.addEventListener('click', function(event) {
+               if (openSubmenu && !event.target.closest('nav .menu > li')) {
+                   openSubmenu.style.display = 'none';
+                   openSubmenu = null;
+               }
+           });
+
+           function closeAllSubmenus() {
+               var submenus = document.querySelectorAll('nav .submenu');
+               submenus.forEach(function(submenu) {
+                   submenu.style.display = 'none';
+               });
+           }
+       });
+
+
+       
+         </script>
+
+   </header>
+
+
+
+
+
+
+
+
+
+
+   <main>
+    <div class="video-container">
+    <video id="background-video"  muted loop playsinline>
+        <source src="Ecole-Theartrale-Sovietique-Actor-training.webm" type="video/webm">
+        <source src="Ecole-Theartrale-Sovietique-Actor-training.mp4" type="video/mp4">
+    </video>
+    <div class="text-overlay">
+        <center>
+            <h1>Tomorrow Spring India</h1>
+            <p>The Stanislavski School of Acting</p>
+        </center>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('background-video');
+        if (video) {
+            video.play().then(() => {
+                // La vidéo a été lue avec succès
+                console.log('La vidéo est lue automatiquement.');
+            }).catch(function(error) {
+                console.log('La lecture automatique a été bloquée.', error);
+                // Déclencher la lecture lorsque l'utilisateur interagit avec la page
+                document.addEventListener('click', function() {
+                    video.play();
+                }, { once: true });
+            });
+        }
+    });
+</script>
+    <section class="first-text">
+        <h3>
+           
+        </h3>
+    </section>
+
+    <section class="container">
+        <img src="images/atelierdec.webp" alt="Atelier découverte" class="image-gauche">
+        <div class="texte-droite">
+            <h2>IN THE SPOTLIGHT</h2>
+            <p>
+                 Registration now open! "Demain le printemps" is offering you an intensive theatre training course in Minsk, the capital of Belarus. On the programme: intensive, multidisciplinary immersion over four weeks (40 hours/week).
+            </p>
+        </div>
+    </section>
+
+    <section>
+      <center><img src="images/Ecole-Theartrale-Sovietique-formation-professionnelle.jpg" width="10px" class="full-width-image" alt="Formation Image"></center>
+    </section>
+
+ <section class="first-text">
+        <h2 class="second-text">OUR TRAINING</h2>
+    </section>
+
+    <section class="main-formation">
+        <div class="frame">
+            <h2>INTENSIVE COURSE</h2>
+            <p class="price">80,000 INR</p>
+            <hr>
+            <ul>
+                <li>A total of 200 hours</li>
+                <li>1 Month in August 2024</li>
+                <li>11 disciplines, end-of-course show</li>
+            </ul>
+            <a href="" target="_blank">
+                <button class="learn-more">LEARN MORE</button>
+            </a>
+        </div>
+      
+<div class="frame">
+    <h2>MASTERCLASS - COMPLETE COURSE</h2>
+    <p class="price">400,000 INR</p>
+    <hr>
+    <ul>
+        <li>A total of 1440 hours</li>
+        <li>(9 Months from October 2024 to June 2025)</li>
+        <li>12 disciplines 35 Performances</li>
+    </ul>
+    <a href="" target="_blank">
+        <button class="learn-more">LEARN MORE</button>
+    </a>
+</div>
+</section>
+
+<div class="postuler">
+    <h2>How to Apply?</h2>
+
+    <div class="container">
+        <div class="step">
+            <h1>1</h1>
+            <h2>First Contact</h2>
+            <p>Send CV and photos by email:<br>contact@tomorrow-spring.org</p>
+        </div>
+        <div class="arrow">&#10140;</div>
+        <div class="step">
+            <h1>2</h1>
+            <h2>Integration Interview</h2>
+            <p>Fill out the application form and schedule an appointment</p>
+        </div>
+        <div class="arrow">&#10140;</div>
+        <div class="step">
+            <h1>3</h1>
+            <h2>Final Registration</h2>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+    <div class="titre">
+        <img src="images/Logo_DLP.png" width="290px" alt="Demain le Printemps Logo">
+    </div>
+
+    <div class="conteneur">
+        
+
+        <div class="sous-conteneur">
+            <h2>  Contact us</h2>
+            <p><img src="whatsapp.png" width="18px" alt="">&nbsp; <a href="https://wa.me/+919818070238?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank">+91 98180 70238</a><br>
+          <img src="email.png" width="19px" alt="">&nbsp; <a href="mailto:contact@tomorrow-spring.org?subject=Request%20for%20Information%20about%20the%20Theatre%20School&body=Hello,%0A%0AI%20am%20interested%20in%20your%20theatre%20school.%20Could%20you%20provide%20me%20with%20more%20information?%0A%0AThank%20you." target="_blank">contact@tomorrow-spring.org</a></p>
+        </div>
+
+        <div class="sous-conteneur">
+            <h2>Hours</h2>
+            <p>From Monday to Saturday<br>from 9am to 9pm</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="masterclass-10-mois.css">
+    <link rel="shortcut icon" href="images-icon.webp">
+    <title>Masterclass 10 months</title>
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+   <header>
+    <!-- Conteneur du logo et des icônes de réseaux sociaux -->
+    <div class="conteneur">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html"><img src="images/Logo_DLP.png" width="290px" alt=""></a>
+        </div>
+        <!-- Icônes de réseaux sociaux -->
+        <div class="icones">
+            <a href="https://www.instagram.com/demainleprintemps?igsh=eWc1bHJqZ3NnN3d6" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/rHpaiGdb5vSHbYr9/?mibextid=LQQJ4d" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/ecoletheatrale?s=21&t=O5NOC0WPUXTLkObxIAntFA" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://youtube.com/@demainleprintempsecolethea2147?si=VA9rE7H1rggAMFvh" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <!-- Barre de navigation -->
+     <div class="sticky">
+
+    
+        <div class="conteneur2">
+            <nav>
+                <ul class="menu">
+                    <!-- Éléments du menu -->
+                    <li>
+                        <a href="index.html">School</a>
+                        <!-- Sous-menu -->
+                        <ul class="submenu">
+                            <li><a href="the-stanislavski-acting-school-educational-content.html">Educational content </a></li>
+                            <li><a href="the-stanislavski-acting-school-our-teaching-team.html">Our teaching team</a></li>
+                            <li><a href="the-stanislavski-acting-school-our-disciplines.html">Our discipline</a></li>
+                            <li><a href="the-stanislavski-acting-school-no-need-to-speak-russian.html">No need to speek Russian</a></li>
+                            <li><a href="the-stanislavski-acting-school-rates-and-quotations.html">Rates and Quotations</a></li>
+                            <li><a href="the-stanislavski-acting-school-grow.html">Grow</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Formation +</a>
+                        <ul class="submenu">
+                            <li><a href="the-stanislavski-acting-school-intership-1-month.html">One-month intership</a></li>
+                            <li><a href="the-stanislavski-acting-school-masterclass-10-month.html">Masterclass 10 month</a></li>
+                            <li><a href="the-stanislavski-acting-school-admission.html">Admission</a></li>
+                            <li><a href="the-stanislavski-acting-school-hosting.html">Hosting</a></li>
+                            <li><a href="the-stanislavski-acting-school-diploma-end-training.html">Diploma of completion</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li><a href="the-stanislavski-acting-school-press-and-multimedia.html">Press and Multimedia</a></li>
+                    <li>
+                        <a href="">Associations +</a>
+                        <ul class="submenu">
+                            <li><a href="the-stanislavski-acting-school-DLP.html">D.L.P</a></li>
+                            <li><a href="the-stanislavski-acting-school-collective.html">collective</a></li>
+                            <li><a href="http://www.moo-teatro.by/" target="_blank">Moo treatro</a></li>
+                            <li><a href="https://ecole-theatrale.com/images/pdf/Asso_DLP_adh%C3%A9sion(2018).pdf" target="_blank"> Support us</a></li>
+                            <li><a href="the-stanislavski-acting-school-our-partner.html">Partners</a></li>
+                            <li><a href="the-stanislavski-acting-school-developer.html">Developers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="the-stanislavski-acting-school-news.html">News</a></li>
+                </ul>
+            </nav>
+            <!-- Bouton de contact WhatsApp -->
+            <div class="boutton">
+                <a href="https://wa.me/+919818070238?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank" class="whatsapp-link"><button>+91 98180 70238</button></a>
+            </div>
+        </div>
+         </div>
+    <!-- Script JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestion de l'ouverture des sous-menus
+        var menuItems = document.querySelectorAll('nav .menu > li > a');
+        var openSubmenu = null;
+
+        menuItems.forEach(function(menuItem) {
+            menuItem.addEventListener('click', function(event) {
+                var submenu = this.nextElementSibling;
+
+                if (submenu && submenu.classList.contains('submenu')) {
+                    if (submenu.style.display === 'block') {
+                        // Si le sous-menu est déjà ouvert, suivre le lien
+                        return true;
+                    } else {
+                        // Si le sous-menu n'est pas ouvert, l'ouvrir et empêcher l'action par défaut
+                        event.preventDefault();
+                        closeAllSubmenus();
+                        submenu.style.display = 'block';
+                        openSubmenu = submenu;
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (openSubmenu && !event.target.closest('nav .menu > li')) {
+                openSubmenu.style.display = 'none';
+                openSubmenu = null;
+            }
+        });
+
+        function closeAllSubmenus() {
+            var submenus = document.querySelectorAll('nav .submenu');
+            submenus.forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+        }
+    });
+
+      </script>
+
+</header>
+
+
+
+<main>
+    <h1>The objectives</h1>
+
+    <center><img src="images/demain-le-printemps-video-Retour-Masterclass-Espace-Daniel-Sorano.jpg" width="200px" alt=""></center>
+    <p>
+        The masterclass is an intensive, multidisciplinary course lasting 9 months (from October to June). Our aim is to enable each participant to acquire a solid grounding in acting techniques, to build their acting 'tools' more precisely and to go further in the process of working within the Russian theatre school.
+    </p>
+    <p>
+        Although an understanding of Russian is not required (as the 1,800 hours of lessons are simultaneously translated from Russian into French), during the masterclass it is possible to study Russian and European culture and, for the more motivated, to learn Russian.
+    </p>
+    <br>
+    <h3>The subjects taught</h3>
+    <p>
+        Acting techniques (with two instructors), biomechanics, diction, classical dance, individual and group singing, acrobatics - plastic arts, piano, combat/fencing/juggling, tempo/rhythm, tap dancing, make-up and Russian lessons.
+    </p>
+    <br>
+    <h3>Organisation and progress of the course</h3>
+    <p>
+        The training takes place in two successive phases. In the first phase, participants work on the concept of "From Act to Feeling": true mobilisation and correct actions naturally give rise to sincere feelings and sensations in the actor during the acting process. The working method is based, on the one hand, on research into the processes that should help the actor to experience genuine feelings and sensations in his performance and, on the other hand, on analysis of the 'psycho-physiological' process that occurs on stage. To this end, various modules and exercises are offered to trainee actors to enable them to put into practice all the stages in the process of building a character.
+    </p>
+
+
+   
+    <br>
+    <h3>Masterclass timetable</h3>
+    <p>
+        Classes run from Monday to Saturday, 8.30 hours a day, with Sundays reserved for rest or rehearsals. Classes are taught by Russian teachers and simultaneously translated into French, in the following disciplines: Acting technique, Acrobatics / Plastic arts, Individual and group singing, Fighting / Fencing / Juggling, Tempo-rhythm, Biomechanics, Diction, Classical dance, Piano, Tap dancing, Make-up.
+    </p>
+    <p>
+        A day's lessons are generally organised as follows:
+    </p>
+   
+       <center><a href="Devis_MA21.pdf" target="_blank" class="btn">Download the full Masterclass quote</a></center>
+    
+    <br>
+    
+</main>
+
+<footer>
+    <div class="titre">
+        <img src="images/Logo_DLP.png" width="290px" alt="Demain le Printemps Logo">
+    </div>
+
+    <div class="conteneur">
+        
+
+        <div class="sous-conteneur">
+            <h2>  Contact us</h2>
+            <p><img src="whatsapp.png" width="19px" alt="">&nbsp; <a href="https://wa.me/+919818070238?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank">+91 98180 70238</a><br>
+          <img src="email.png" width="19px" alt="">&nbsp; <a href="mailto:contact@tomorrow-spring.org?subject=Request%20for%20Information%20about%20the%20Theatre%20School&body=Hello,%0A%0AI%20am%20interested%20in%20your%20theatre%20school.%20Could%20you%20provide%20me%20with%20more%20information?%0A%0AThank%20you." target="_blank">contact@tomorrow-spring.org</a></p>
+        </div>
+
+        <div class="sous-conteneur">
+            <h2>Hours</h2>
+            <p>From Monday to Saturday<br>from 9am to 9pm</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html> 

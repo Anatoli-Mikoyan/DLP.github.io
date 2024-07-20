@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dlp.css">
+    <link rel="shortcut icon" href="images-icon.webp">
+    <title>D.L.P</title>
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+   <header>
+    <!-- Conteneur du logo et des icônes de réseaux sociaux -->
+    <div class="conteneur">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html"><img src="images/Logo_DLP.png" width="290px" alt=""></a>
+        </div>
+        <!-- Icônes de réseaux sociaux -->
+        <div class="icones">
+            <a href="https://www.instagram.com/demainleprintemps?igsh=eWc1bHJqZ3NnN3d6" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/rHpaiGdb5vSHbYr9/?mibextid=LQQJ4d" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/ecoletheatrale?s=21&t=O5NOC0WPUXTLkObxIAntFA" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://youtube.com/@demainleprintempsecolethea2147?si=VA9rE7H1rggAMFvh" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <!-- Barre de navigation -->
+     <div class="sticky">
+
+   
+        <div class="conteneur2">
+            <nav>
+                <ul class="menu">
+                    <!-- Éléments du menu -->
+                    <li>
+                        <a href="index.html">School</a>
+                        <!-- Sous-menu -->
+                        <ul class="submenu">
+                            <li><a href="the-stanislavski-acting-school-educational-content.html">Educational content </a></li>
+                            <li><a href="the-stanislavski-acting-school-our-teaching-team.html">Our teaching team</a></li>
+                            <li><a href="the-stanislavski-acting-school-our-disciplines.html">Our discipline</a></li>
+                            <li><a href="the-stanislavski-acting-school-no-need-to-speak-russian.html">No need to speek Russian</a></li>
+                            <li><a href="the-stanislavski-acting-school-rates-and-quotations.html">Rates and Quotations</a></li>
+                            <li><a href="the-stanislavski-acting-school-grow.html">Grow</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Formation +</a>
+                        <ul class="submenu">
+                            <li><a href="the-stanislavski-acting-school-intership-1-month.html">One-month intership</a></li>
+                            <li><a href="the-stanislavski-acting-school-masterclass-10-month.html">Masterclass 10 month</a></li>
+                            <li><a href="the-stanislavski-acting-school-admission.html">Admission</a></li>
+                            <li><a href="the-stanislavski-acting-school-hosting.html">Hosting</a></li>
+                            <li><a href="the-stanislavski-acting-school-diploma-end-training.html">Diploma of completion</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li><a href="the-stanislavski-acting-school-press-and-multimedia.html">Press and Multimedia</a></li>
+                    <li>
+                        <a href="">Associations +</a>
+                        <ul class="submenu">
+                            <li><a href="the-stanislavski-acting-school-DLP.html">D.L.P</a></li>
+                            <li><a href="the-stanislavski-acting-school-collective.html">collective</a></li>
+                            <li><a href="http://www.moo-teatro.by/" target="_blank">Moo treatro</a></li>
+                            <li><a href="https://ecole-theatrale.com/images/pdf/Asso_DLP_adh%C3%A9sion(2018).pdf" target="_blank"> Support us</a></li>
+                            <li><a href="the-stanislavski-acting-school-our-partner.html">Partners</a></li>
+                            <li><a href="the-stanislavski-acting-school-developer.html">Developers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="the-stanislavski-acting-school-news.html">News</a></li>
+                </ul>
+            </nav>
+            <!-- Bouton de contact WhatsApp -->
+            <div class="boutton">
+                <a href="https://wa.me/+919818070238?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank" class="whatsapp-link"><button>+91 98180 70238</button></a>
+            </div>
+        </div>
+         </div>
+    <!-- Script JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestion de l'ouverture des sous-menus
+        var menuItems = document.querySelectorAll('nav .menu > li > a');
+        var openSubmenu = null;
+
+        menuItems.forEach(function(menuItem) {
+            menuItem.addEventListener('click', function(event) {
+                var submenu = this.nextElementSibling;
+
+                if (submenu && submenu.classList.contains('submenu')) {
+                    if (submenu.style.display === 'block') {
+                        // Si le sous-menu est déjà ouvert, suivre le lien
+                        return true;
+                    } else {
+                        // Si le sous-menu n'est pas ouvert, l'ouvrir et empêcher l'action par défaut
+                        event.preventDefault();
+                        closeAllSubmenus();
+                        submenu.style.display = 'block';
+                        openSubmenu = submenu;
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (openSubmenu && !event.target.closest('nav .menu > li')) {
+                openSubmenu.style.display = 'none';
+                openSubmenu = null;
+            }
+        });
+
+        function closeAllSubmenus() {
+            var submenus = document.querySelectorAll('nav .submenu');
+            submenus.forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+        }
+    });
+
+      </script>
+</header>
+
+
+<main>
+    <div class="titre">
+        <h1>Demain le Printemps</h1>
+    </div>
+    <section id="about">
+        <h2>About</h2>
+        <p>Tomorrow the Spring, a Franco-Belarusian association, was founded in 1994. It is a non-profit organization governed by the law of 1901. It exists thanks to the involvement of volunteers and is led notably by former participants in our events. Several former students are members of the board of directors and the association's office.</p>
+        <p>The idea of creating a theatre school was born from a meeting between French and Belarusian actors and directors: Fabrice Carrey, Sergueï Tarassiuk, Igor Blinkov, and Igor Petrov. The goal of our school is to introduce students, over a nine-month period or in the context of an intensive one-month course, to the fundamentals of the four-year program at the National Academy of Arts of Belarus in Minsk. The professors of this national school work on training actors using a method based on the Russian theatrical techniques developed by Stanislavski.</p>
+        <p>Since 1997, the association has developed numerous cultural exchanges, workshops, and masterclasses bringing together not only French and Belarusians but also French speakers from all backgrounds, including Quebecers, Swiss, and Belgians. These meetings between artists enrich the culture of our countries and create lasting links between Belarusian theatre professionals and their French-speaking counterparts.</p>
+        <p>The ties woven by Tomorrow the Spring between the artistic communities of France and Belarus are now very close and give rise each year to new Franco-Belarusian projects. Tomorrow the Spring has participated in the organization of the Belarusian Culture Days of the Embassy of Belarus in Paris, and in June 2014, the national troupe YANKA KOUPALA performed "Pan Tadeush" at the MC93 in Paris.</p>
+        <div class="button-container">
+            <a href="Tomorrow_Spring_India_Booklet_Final.pdf" target="_blank" class="btn">Download the presentation file</a>
+        </div>
+    </section>
+    <section id="school">
+        <h2>What is the "Russian Theatre School"?</h2>
+        <p>The "Russian theatre school" is an approach to the art of acting that was initiated at the end of the 19th century by an innovative movement: "To be an actor is to constantly develop one's artistic sense, sensitivity, and humanism with a civic spirit." Vladimir Nemirovitch-Dantchenko and Konstantin Stanislavski are the founders of the Russian theatre school.</p>
+        <p>Actor training is based on the teaching of a technique, but also on the development of the actor's attitude towards his work. A work ethic and life ethic, based on respect for one's partner and audience, the development of imagination and curiosity to make the actor above all an artist at heart. The Russian director and educator Konstantin Stanislavski indeed added to technical learning, a transformation of the individual as a person, connected to a profession that requires constant work on oneself, "because the actor works with his body, mind, own feelings, and emotions".</p>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vU_1xUPb7KM?si=JqdfqZzFExHaFXZ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="titre">
+        <img src="images/Logo_DLP.png" width="290px" alt="Demain le Printemps Logo">
+    </div>
+
+    <div class="conteneur">
+        
+
+        <div class="sous-conteneur">
+            <h2>  Contact us</h2>
+            <p><img src="whatsapp.png" width="19px" alt="">&nbsp; <a href="https://wa.me/+919818070238?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank">+91 98180 70238</a><br>
+          <img src="email.png" width="19px" alt="">&nbsp; <a href="mailto:contact@tomorrow-spring.org?subject=Request%20for%20Information%20about%20the%20Theatre%20School&body=Hello,%0A%0AI%20am%20interested%20in%20your%20theatre%20school.%20Could%20you%20provide%20me%20with%20more%20information?%0A%0AThank%20you." target="_blank">contact@tomorrow-spring.org</a></p>
+        </div>
+
+        <div class="sous-conteneur">
+            <h2>Hours</h2>
+            <p>From Monday to Saturday<br>from 9am to 9pm</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html> 
