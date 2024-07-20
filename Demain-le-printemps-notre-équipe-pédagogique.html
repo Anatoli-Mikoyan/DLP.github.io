@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notre-equipe-pedagogique.css">
+    <link rel="shortcut icon" href="images-icon.webp">
+    <title>Notre équipe pédagogique</title>
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+   <header>
+    <!-- Conteneur du logo et des icônes de réseaux sociaux -->
+    <div class="conteneur">
+        <!-- Logo -->
+        <div class="logo">
+            <a href=""><img src="https://www.ecole-theatrale.com/images/partenaires/Logo_DLP.png" width="290px" alt=""></a>
+        </div>
+        <!-- Icônes de réseaux sociaux -->
+        <div class="icones">
+            <a href="https://www.instagram.com/demainleprintemps?igsh=eWc1bHJqZ3NnN3d6" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/rHpaiGdb5vSHbYr9/?mibextid=LQQJ4d" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/ecoletheatrale?s=21&t=O5NOC0WPUXTLkObxIAntFA" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://youtube.com/@demainleprintempsecolethea2147?si=VA9rE7H1rggAMFvh" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <!-- Barre de navigation -->
+     <div class="sticky">
+
+    
+    <div class="conteneur2">
+        <nav>
+            <ul class="menu">
+                <!-- Éléments du menu -->
+                <li>
+                    <a href="index.html">École</a>
+                    <!-- Sous-menu -->
+                    <ul class="submenu">
+                        <li><a href="école-theatrale.com-Demain-le-printemps-contenu-pedagogique.html">Contenu Pédagogique</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-notre-équipe-pédagogique.html">Notre équipe Pédagogique</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-nos-disciplines.html">Nos Disciplines</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-pas-besoin-de-parler-russe.html">Pas besoins de parler russe</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-Tarifs-et-devis.html">Tarifs et devis</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-se-cultiver.html">Se cultiver</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Formation +</a>
+                    <ul class="submenu">
+                        <li><a href="#">Le stage d'un mois</a></li>
+                        <li><a href="#">La masterclass 10 mois</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Ateliers découverte</a></li>
+                        <li><a href="#">Hébergement</a></li>
+                        <li><a href="#">Diplômes de fin de formation</a></li>
+                        <li><a href="#">Programmes spéciaux pour le Maghreb</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Les élèves +</a>
+                    <ul class="submenu">
+                        <li><a href="école-theatrale.com-Demain-le-printemps-Portrait-d'-anciens.html">Portrait d'anciens</a></li>
+                        <li><a href="https://demainleprintemps.wordpress.com/" target="_blank" >Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="école-theatrale.com-Demain-le-printemps-Presse-et-Multimédia.html">Presse et Multimédia</a></li>
+                <li>
+                    <a href="">Associations +</a>
+                    <ul class="submenu">
+                        <li><a href="école-theatrale.com-Demain-le-printemps-DLP.html">D.L.P</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-Collectif.html">Collectif</a></li>
+                        <li><a href="http://www.moo-teatro.by/" target="_blank">Moo treatro</a></li>
+                        <li><a href="https://ecole-theatrale.com/images/pdf/Asso_DLP_adh%C3%A9sion(2018).pdf" target="_blank"> Nous soutenir</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-nos-partenaires.html">Partenaires</a></li>
+                        <li><a href="école-theatrale.com-Demain-le-printemps-Developpeur.html">Développeurs</a></li>
+                    </ul>
+                </li>
+                <li><a href="école-theatrale.com-Demain-le-printemps-Actualité.html">Actualités</a></li>
+            </ul>
+        </nav>
+        <!-- Bouton de contact WhatsApp -->
+        <div class="boutton">
+            <a href="https://wa.me/+33615199248?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank" class="whatsapp-link"><button>+33 6 15 19 92 48</button></a>
+        </div>
+    </div>
+     </div>
+    <!-- Script JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestion de l'ouverture des sous-menus
+        var menuItems = document.querySelectorAll('nav .menu > li > a');
+        var openSubmenu = null;
+
+        menuItems.forEach(function(menuItem) {
+            menuItem.addEventListener('click', function(event) {
+                var submenu = this.nextElementSibling;
+
+                if (submenu && submenu.classList.contains('submenu')) {
+                    if (submenu.style.display === 'block') {
+                        // Si le sous-menu est déjà ouvert, suivre le lien
+                        return true;
+                    } else {
+                        // Si le sous-menu n'est pas ouvert, l'ouvrir et empêcher l'action par défaut
+                        event.preventDefault();
+                        closeAllSubmenus();
+                        submenu.style.display = 'block';
+                        openSubmenu = submenu;
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (openSubmenu && !event.target.closest('nav .menu > li')) {
+                openSubmenu.style.display = 'none';
+                openSubmenu = null;
+            }
+        });
+
+        function closeAllSubmenus() {
+            var submenus = document.querySelectorAll('nav .submenu');
+            submenus.forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+        }
+    });
+
+      </script>
+
+</header>
+
+
+
+<main>
+
+<div class="titre">
+   <h1>Notre équipe pédagogique </h1>
+</div>
+
+<div class="conteneur">
+
+    <div class="case">
+        <img src="images/Aleksandra2.jpg" width="290" height="300" alt="">
+        <h2>Alexandra Izraelovna Sandler</h2>
+        <p>Cours de tempo/rythme</p>
+    </div>
+    <div class="case">
+        <img src="images/marina.jpg" width="290" height="300" alt="">
+        <h2>Marina Viktorovna Filatova</h2>
+        <p>Cours de danse</p>
+    </div>
+    <div class="case">
+        <img src="images/tatiana.jpg" width="290" height="300" alt="">
+        <h2>Tatiana Alexsandrovna Panassiuk</h2>
+        <p>Cours de piano</p>
+    </div>
+    <div class="case">
+        <center><img src="images/youri.jpg" width="290" height="300" alt="Aurélien AMBACH ALBERTINI"></center>  
+        <h2>Youri Adamovitch Yanovich</h2>
+        <p>Cours d'acrobatie</p>
+    </div>
+    <div class="case">
+        <img src="images/pavel.jpg" width="290" height="300" alt="">
+        <h2>Pavel Ivanovitch Evtouchenko</h2>
+        <p>Cours de diction</p>
+    </div>
+    <div class="case">
+        <img src="images/anastasia.jpg" width="290" height="300" alt="">
+        <h2>Anastasia Igorévna Voltchek</h2>
+        <p>Cours de flamenco</p>
+    </div>
+    <div class="case">
+        <img src="images/serguei.jpg" width="290" height="300" alt="">
+        <h2>Serguei Nikolaevich Tarasiuk</h2>
+        <p>Cours de technique du comédien</p>
+    </div>
+    <div class="case">
+        <img src="images/elizaveta.jpg" width="290" height="300" alt="Emilie CHEVRILLON">
+        <h2>Elizaveta Тimophéévna Ilievskaya</h2>
+        <p>Cours de plastique, d'escrime et de combat</p>
+    </div>
+    <div class="case">
+        <center><img src="images/igor2.jpg" width="290" height="300" alt=""></center>  
+        <h2>Igor Victorovich Petrov</h2>
+        <p>Cours de biomécanique et de claquette</p>
+    </div>
+    <div class="case">
+        <img src="images/ekaterina.jpg" width="290" height="300" alt="">
+        <h2>Ekatérina Alexandrovna Degtyareva</h2>
+        <p>Cours de chant</p>
+    </div>
+    <div class="case">
+        <img src="images/fabrice carrey Clt.jpg" width="290" height="300" alt="">
+        <h2>Fabrice Carrey</h2>
+        <p>Direction et organisation</p>
+    </div>
+    <div class="case">
+        <img src="images/ekaterina2.jpg" width="290" height="300" alt="">
+        <h2>Ekatérina Dmitrievna Kriventsova</h2>
+        <p>Interprète et Coordinatrice de projet</p>
+    </div>
+    <div class="case">
+        <img src="images/maria.jpg" width="290" height="300" alt="Sibylle LIEVOIS">
+        <h2>Maria Sergéévna Yarets</h2>
+        <p>Interprète, Coordinatrice du projet et Cours de russe</p>
+    </div>
+    <div class="case">
+        <img src="images/yana.jpg" width="290" height="300" alt="Esther NUBIOLA">
+        <h2>Yana Sergéévna Dénissova</h2>
+        <p>Interprèt et Coordinatrice de projet</p>
+    </div>
+    
+</main>
+
+<footer>
+    <footer>
+      <div class="titre">
+          <img src="images/Logo_DLP.png" width="290px" alt="Logo Demain le Printemps">
+      </div>
+  
+      <div class="conteneur">
+          <div class="sous-conteneur">
+              <h2>Adresse</h2>
+              <p><a href="https://www.google.com/maps/dir//7+Rue+de+Rome+d21,+94800+Villejuif/@48.788797,2.2894704,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e673e5ec5dffa1:0xc0c3e7f8ef4c1de6!2m2!1d2.3718717!2d48.7887133?entry=ttu" target="_blank">7 rue de Rome D21<br>94800 Villejuif</a></p>
+          </div>
+  
+          <div class="sous-conteneur">
+              <h2>Contact</h2>
+              <p><a href="https://wa.me/+33615199248?text=Hello%2C%20I'm%20interested%20in%20your%20school.%20Could%20you%20provide%20me%20with%20more%20information%3F" target="_blank">+33 6 15 19 92 48</a><br>
+                <a href="mailto:demainleprintemps@gmail.com?subject=Request%20for%20Information%20about%20the%20Theater%20School&body=Hello,%0A%0AI%20am%20interested%20in%20your%20theater%20school.%20Could%20you%20provide%20me%20with%20more%20information?%0A%0AThank%20you." target="_blank" >demainleprintemps@gmail.com</a></p>
+          </div>
+  
+          <div class="sous-conteneur">
+              <h2>Horaires</h2>
+              <p>Du lundi au samedi<br>de 9h à 21h</p>
+          </div>
+      </div>
+  </footer>
+
+
+</div>
+
+</body>
+</html> 
